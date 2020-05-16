@@ -1,0 +1,13 @@
+$column: 12;
+$offset: 30px;
+$offset_one_side: $offset / 2;
+
+@mixin size($n) {
+	width: (100% / $column * $n);
+}
+
+@mixin size-md($n) {
+	@media screen and (max-width: 1000px){
+		@include size($n);
+	}
+}

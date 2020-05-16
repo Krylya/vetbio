@@ -1,0 +1,94 @@
+.main-slogan p {
+	font-size: 1.2rem;
+	line-height: 1.4;
+	margin: 0;
+}
+.main-slogan_first {
+	margin-top: 20px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: $green-color;
+	span {
+		font-weight: 600;
+	}
+	p {
+		color: #ffffff;
+		font-size: 1.2rem;
+		line-height: 1.4;
+	}
+}
+
+.main-slogan_second {
+	/*margin-top: 70px;*/
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: $green-color;
+	color: #ffffff;
+}
+
+/**************************
+tablet-width
+**************************/
+@media #{$tablet-width} {
+
+	.main-slogan_first {
+		margin-top: 0;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		background-color: #ffffff;
+		span {
+			color:  $green-color;
+		}
+	}
+	.main-slogan p {
+		font-size: 1.6rem;
+		line-height: 1.4;
+		color: $dark-green;
+	}
+
+	.main-slogan_second {
+		background-color: #ffffff;
+		padding-top: 110px;
+		padding-bottom: 110px;
+	}
+
+}/* END tablet-width */
+
+
+/**************************
+tablet-gorizontal
+**************************/
+@media #{$tablet-gorizontal} {
+	.main-slogan p {
+		font-size: 1.8rem;
+	}
+	.main-slogan_first {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	.main-slogan_second {
+		margin-top: 0;
+		height: auto;
+		padding-top: 160px;
+		padding-bottom: 160px;
+	}
+}/* END tablet-gorizontal */
+
+
+/**************************
+desktop-width
+**************************/
+@media #{$desktop-width} {
+	.main-slogan p {
+		font-size: 2.2rem;
+	}
+	.main-slogan_first {
+		padding-top: 110px;
+		padding-bottom: 110px;
+	}
+	.main-slogan_second {
+		padding-top: 180px;
+		padding-bottom: 180px;
+	}
+}/* END tablet-gorizontal */

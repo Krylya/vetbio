@@ -1,0 +1,130 @@
+.product-menu-wrap {
+	display: none;
+}
+
+/**************************
+tablet-width
+**************************/
+@media #{$tablet-width} {
+
+}/*  tablet-width  */
+
+
+/**************************
+tablet-gorizontal
+**************************/
+@media #{$tablet-gorizontal} {
+	.product-menu-wrap {
+		display: block;
+		background-color: #ffffff;
+		height: 30px;
+		position: relative;
+		font-family: 'SF UI Text';
+	}
+	.product-menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+	}
+	.product-menu__item {
+		margin-left: 40px;
+		position: relative;
+	}
+	.product-menu__name {
+		display: inline-block;
+		font-size: 1.1rem;
+		margin: 0;
+		font-weight: 500;
+		color: $black-color;
+		cursor: pointer;
+	}
+	.product-sub-menu {
+		padding: 30px 80px 30px 30px;
+		width: 480px;
+		position: absolute;
+		left: -290px;
+		z-index: 10;
+		background-color: #ffffff;
+		transition: all 300ms ease-out;
+		display: none;
+	}
+	.product-menu__item:hover {
+		.product-menu__name {
+			color: $green-color;
+		}
+		.product-sub-menu {
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+	.product-menu__item.active {
+		.product-menu__name {
+			color: $green-color;
+			border-bottom: 1px solid $green-color;
+		}
+	}
+	 /* картинка с животными */
+	.product-sub-menu__img {
+		margin-right: 40px;
+	}
+	.product-sub-menu__img-wrap {
+		width: 220px;
+		height: 220px;
+		background-color: rgb(220, 225, 230);
+		overflow: hidden;
+	}
+	.product-sub-menu__img-wrap img {
+		position: relative;
+		height: 220px;
+		width: auto;
+	 }
+
+	 /* позицинирование картинки с животными */
+	 .product-menu__item {
+	 	&:nth-child(2) {
+	 		.product-sub-menu__img-wrap img {
+				left: -220px;
+			 }
+	 	}
+	 	&:nth-child(3) {
+	 		.product-sub-menu__img-wrap img {
+				left: -440px;
+			 }
+	 	}
+	 	&:nth-child(4) {
+	 		.product-sub-menu__img-wrap img {
+				left: -660px;
+			 }
+	 	}
+	 	&:nth-child(5) {
+	 		.product-sub-menu__img-wrap img {
+				left: -880px;
+			 }
+	 	}
+	 }
+
+	.product-sub-menu.active {
+		left: 0;
+	}
+	.product-sub-menu__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.product-sub-menu__list li {
+		margin-bottom: 16px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.product-sub-menu__list a {
+		text-decoration: none;
+		color: $dark-gray;
+		white-space: nowrap;
+	}
+	.product-sub-menu__list a:hover {
+		color: $green-color;
+	}
+}

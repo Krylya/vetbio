@@ -1,0 +1,140 @@
+body {
+	min-height: calc(100vh - 160px);
+	padding-bottom: 160px;
+	font-family: 'SF UI Text';
+	overflow-x: hidden;
+}
+.wrapper {
+	@include wrapper();
+}
+.row-flex {
+	@include row-flex();
+}
+
+// h1, h2, h3 {
+// 	margin: 0;
+// 	padding: 0;
+// }
+h1 {
+	color: $green-color;
+	font-family: 'SF UI Text';
+	font-weight: 500;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+}
+h2 {
+	font-family: 'SF UI Text';
+	font-weight: 500;
+	font-size: 1.6rem;
+	color: $dark-green;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+h3 {
+	color: $dark-green;
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+
+.description_02 p {
+	color: $green-color;
+	font-size: 1.2rem;
+	margin-bottom: 30px;
+	line-height: 1.4;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* заголовок для внутренних страниц */
+.h1-inner-page {
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.h2-inner-page {}
+.h3-inner-page {}
+
+/* Блоки с большими цифрами */
+.number-item {
+	span {
+		font-size: 4rem;
+		color: $green-color;
+		font-family: 'BebasNeue-Bold';
+		font-weight: bold;
+	}
+	p {
+		font-family: 'SF UI Text';
+		font-weight: 400;
+		font-size: 1rem;
+		color: $dark-gray;
+		margin: -4px 0 0;
+	}
+}
+
+table {
+	border-collapse: collapse
+}
+table td {
+	border: 1px solid $dark-gray;
+	padding: 4px;
+}
+
+/**************************
+tablet-width
+**************************/
+@media #{$tablet-width} {
+	body {
+		min-height: calc(100vh - 170px);
+		padding-bottom: 170px;
+	}
+	h1 {
+		font-size: 1.8rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-weight: 500;
+		font-size: 1.3rem;
+	}
+
+	.description_02 p {
+		font-size: 1.3rem;
+		line-height: 1.4;
+	}
+}/* END tablet-width */
+
+
+/**************************
+tablet-gorizontal
+**************************/
+@media #{$tablet-gorizontal} {
+	body {
+		min-height: calc(100vh - 200px);
+		padding-bottom: 200px;
+	}
+	h1 {
+		font-weight: 400;
+	}
+	h2 {
+		font-weight: 400;
+		font-size: 2.2rem;
+		text-transform: uppercase;
+	}
+
+	/* Блоки с большими цифрами */
+	.number-item {
+		span {
+			font-size: 8rem;
+		}
+		p {
+			font-weight: 400;
+			margin: -12px 0 0;
+		}
+	}
+
+	.description_02 p {
+		font-size: 1.5rem;
+	}
+}/* END tablet-gorizontal */

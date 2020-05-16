@@ -1,0 +1,83 @@
+.toggle-button {
+	width: 48px;
+	height: 100%;
+	margin-right: 8px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;;
+	align-items: center;
+	&:hover {
+			.toggle-button__line {
+				&::before, &::after {
+					transform: scaleX(1);
+				}
+		}
+	}
+}
+.toggle-button__line-wrap {
+	width: 38px;
+	height: 40px;
+	position: relative;
+}
+.toggle-button__line {
+	display: inline-block;
+	height: 2px;
+	width: 32px;
+	background-color: $green-color;
+	position: absolute;
+    height: 2px;
+    width: 32px;
+    left: 50%;
+    top: 50%;
+    margin-left: -16px;
+    margin-top: -1px;
+	transition: .3s;
+		&::before, &::after {
+			content: '';
+			display: inline-block;
+			transition: .3s;
+			background-color: $green-color;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			/*transform: scaleX(.6875);*/
+			transform-origin: 0 center;
+			will-change: transform;
+		}
+		&::before {
+			margin-top: -8px;
+		}
+		&::after {
+			margin-top: 8px;
+		}
+}
+.toggle-button.show .toggle-button__line {
+	background-color: transparent;
+	&::before{
+		transform: rotate(45deg);
+		margin-top: -11px;
+	}
+	&::after {
+		transform: rotate(-45deg);
+		margin-top: 11px;
+	}
+}
+
+
+/************************
+Tablet
+************************/
+@media #{$tablet-width} {
+
+}/* END tablet-width */
+
+
+/************************
+desktop-width
+************************/
+@media #{$tablet-gorizontal} {
+	.toggle-button {
+		display: none;
+	}
+}/* END tablet-width */

@@ -1,0 +1,70 @@
+.catalog-slider__wrap .catalog-slider {
+	display: none;
+}
+
+#catalog-slider { 
+	display: none;
+}
+
+.catalog__img-mob {
+	height: 200px;
+	margin-bottom: 60px;
+	background: rgb(235, 240, 245)  url(../img/images/import_md.jpg) no-repeat 50% 50%; 
+	background-size: cover;
+}
+
+/**************************
+tablet-width
+**************************/
+@media #{$tablet-width} {
+	.catalog__img-mob {
+		height: 260px;
+		margin-top: 20px;
+	}
+}/*  tablet-width  */
+
+
+/**************************
+tablet-gorizontal
+**************************/
+@media #{$tablet-gorizontal} {
+	.catalog__img-mob {
+		display: none;
+	}
+
+	.catalog-slider__wrap {
+		display: block;
+		width: 50%;
+		height: calc(100% - 280px);	
+		position: absolute;
+		right: 0;
+		top: 100px;
+		background-color: #ebedf0;
+	}
+	.catalog-slider__wrap .catalog-slider {
+		display: block;
+	}
+
+	/* Оболочка слайдера */
+	#catalog-slider { 
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	.catalog-slider__item { /* Слайд */
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+/**************************
+desktop-width
+**************************/
+@media #{$desktop-width} {
+	
+}/* END desktop-width */

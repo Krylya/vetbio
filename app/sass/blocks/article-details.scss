@@ -1,0 +1,135 @@
+.article-details {
+	font-family: 'SF UI Text';
+	margin-top: 20px;
+}
+.article-details__title {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	color: $green-color;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 1.2;
+}
+.view-data__wrap {
+	margin-top: 20px;
+	display: flex;
+	justify-content: flex-start;
+}
+.article-details__data {
+	display: inline-block;
+	color: $dark-gray;
+	font-size: 0.9rem;
+	margin: 0;
+}
+.article-details__views {
+	position: relative;
+	display: inline-block;
+	color: $dark-gray;
+	font-size: 0.9rem;
+	margin: 0 42px 0 0;
+	&:after {
+		content: '';
+	    position: absolute;
+	    bottom: 2px;
+	    right: -28px;
+	    width: 23px;
+	    height: 14px;
+	    background-image: url('../img/icon/eye.svg');
+	    background-repeat: no-repeat;
+	    background-size: contain; 
+	}
+}
+
+.article-author {
+	display: flex;
+	margin-top: 24px;
+}
+.article-author__img {
+	width: 80px;
+	height: 80px;
+	margin-right: 12px;
+	border-radius: 100%;
+	outline: none;
+	background-position: center;
+	background-size: cover;
+}
+.article-author__text {
+	color: $dark-gray;
+}
+.article-author__name {
+	font-size: 0.9rem;
+	font-weight: 700;
+	margin: 12px 0 6px 0;
+}
+.article-author__position {
+	font-weight: 400;
+	font-style: italic;
+	margin: 0;
+	font-size: 0.8rem;
+}
+
+.article-details__img {
+	margin: 32px auto 18px auto;
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.article__public {
+	display: flex;
+	p {
+		color: $gray-color;
+		margin: 0;
+	}
+	.article__link-to-pdf {
+		display: none;
+	}
+}
+
+.article-details__text {
+	font-size: 0.9rem;
+	line-height: 1.3;
+	margin-top: 30px;
+}
+
+
+/**************************
+tablet-width
+**************************/
+@media #{$tablet-width} {
+
+}/* END tablet-width */
+
+
+/**************************
+tablet-gorizontal
+**************************/
+@media #{$tablet-gorizontal} {
+
+	.article-details__title {
+		margin-top: 16px;
+		margin-bottom: 16px;
+		font-size: 2rem;
+		line-height: 1.2;
+	}
+
+	.article__public {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.article__link-to-pdf {
+			display: block;
+			img {
+				width: 30px;
+				height: auto;
+			}
+		}
+	}
+	.article-details__text {
+		font-size: 1rem;
+		line-height: 1.3;
+	}
+
+}/* END tablet-gorizontal */

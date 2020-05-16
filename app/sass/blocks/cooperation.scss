@@ -1,0 +1,41 @@
+.cooperation-list {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 60px;
+}
+
+.cooperation-item {
+	width: 50%;
+	margin-bottom: 20px;
+	img {
+		width: 75%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+/**************************
+tablet-width
+**************************/
+@media #{$tablet-width} {
+	.cooperation-item {
+		width: 25%;
+	}
+}/* END tablet-width */
+
+
+/**************************
+tablet-gorizontal
+**************************/
+@media #{$tablet-gorizontal} {
+	.cooperation-list {
+		margin-top: 80px;
+	}
+	.cooperation-item {
+		width: 20%;
+		margin-bottom: 40px;
+	}
+}/* END tablet-gorizontal */

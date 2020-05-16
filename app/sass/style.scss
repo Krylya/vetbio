@@ -1,0 +1,46 @@
+@import "global/reset.scss";
+@import "global/smart-grid.scss";
+@import "global/variables.scss";
+@import "global/layout.scss";
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+
+@import "blocks/header.scss";
+@import "blocks/main-menu.scss";
+@import "blocks/toggle-button.scss";
+@import "blocks/where-buy.scss";
+@import "blocks/search.scss";
+@import "blocks/footer.scss";
+@import "blocks/video.scss";
+
+/*main page*/
+@import "blocks/main-slogan.scss";
+@import "blocks/main-production.scss";
+@import "blocks/main-rec-banner.scss";
+@import "blocks/main-news.scss";
+@import "blocks/main-servises.scss";
+@import "blocks/main-subscription.scss";
+
+/* news */
+@import "blocks/news-list.scss";
+@import "blocks/news-details.scss";
+
+/* articles */
+@import "blocks/article-details.scss";
+
+/* products */
+@import "blocks/catalog.scss";
+@import "blocks/catalog-menu_02.scss";
+@import "blocks/product-menu.scss";
+@import "blocks/product-list.scss";
+@import "blocks/product.scss";
+
+/* single pages */
+@import "blocks/about.scss";
+@import "blocks/staff.scss";
+@import "blocks/science.scss";
+@import "blocks/cooperation.scss";
+@import "blocks/documents.scss";
+@import "blocks/factory.scss";
+@import "blocks/contacts.scss";
+@import "blocks/book-details.scss";

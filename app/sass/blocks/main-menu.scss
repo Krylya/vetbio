@@ -1,0 +1,137 @@
+.main-menu-wrapper {
+	position: absolute;
+	top: 60px;
+	background-color: #ffffff;
+	height: 100vh;
+	width: 100%;
+	display: none;
+	z-index: 20;
+}
+.main-menu-wrapper.show {
+	display: flex;
+}
+
+.main-menu {
+	@include reset-list;
+	margin: auto 0 auto 15%;
+	position: relative;
+	top: -5%;
+	width: 80%;
+}
+.main-menu__item {
+	margin: 28px 0;
+	a {
+		color: $dark-green;
+		font-size: 20px;
+		text-decoration: none;
+		font-family: 'SF UI Display';
+		font-weight: 500;
+		font-style: normal;
+		text-transform: uppercase;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+}
+
+.sub-menu {
+	@include reset-list;
+}
+.sub-menu__item {
+	margin: 22px 0;
+}
+
+.no-mobile {
+	display: none;
+}
+
+/**************************
+tablet-width
+**************************/
+@media #{$tablet-gorizontal} {
+	.main-menu-wrapper {
+		display: block;
+		right: 80px;
+		top: 30px;
+		width: auto;
+		height: auto;
+	}
+	.main-menu {
+		margin: auto;
+		top: 0;
+		width: auto;
+		display: flex;
+	}
+	.main-menu__item {
+		margin: 0 12px;
+		position: relative;
+		padding: 2px 0;
+		border-bottom: 2px solid #ffffff;
+		transition: all 0.2s linear;
+		a {
+			white-space: nowrap;
+			color: $black-color;
+			font-size: 18px;
+			font-weight: 400;
+			text-transform: uppercase;
+			font-size: 1rem;
+		}
+		&:hover {
+			border-bottom: 1px solid $green-color;
+			.sub-menu {
+				display: block;
+			}
+		}
+		&.active {
+			border-bottom: 1px solid $green-color;
+			> a {
+				color: $green-color;
+			}
+		}
+	}
+
+	.sub-menu {
+		position: absolute;
+		left: -42px;
+		background-color: #ffffff;
+		padding: 16px 32px;
+		min-width: 160px;
+		z-index: 10;
+		box-shadow: 3px 3px 4px rgba(160, 170, 180, 0.3);
+		display: none;
+	}
+	.sub-menu__item {
+		position: relative;
+		margin: 0;
+		padding: 8px 0 8px 8px;
+		left: 0;
+		top: 0;
+		transition: all 0.3s ease-out;
+	}
+	.sub-menu__item a {
+		white-space: nowrap;
+		transition: all 0.3s 0.2s ease-out;
+		text-transform: none;
+		font-size: 1.1rem;
+	}
+	.sub-menu__item:hover a {
+		color: $green-color;
+	}
+
+	.no-mobile {
+		display: block;
+	}
+	.no-desktop {
+		display: none;
+	}
+}/* END $tablet-gorizontal */
+
+/**************************
+desktop-width
+**************************/
+@media #{$desktop-width} {
+	.main-menu-wrapper {
+		right: auto;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}/* END desktop-width */

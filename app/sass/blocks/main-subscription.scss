@@ -1,0 +1,71 @@
+.main-subscription__wrap {
+	display: none;
+}
+
+/**************************
+tablet-width
+**************************/
+@media #{$tablet-width} {
+
+	.main-subscription__wrap {
+		position: relative;
+		left: -18px;
+		display: block;
+		margin: 70px auto 0 auto;
+		width: 500px;
+		font-family: 'SF UI Text';
+	}
+
+	/* текстовый блок */
+	.subscription {
+		display: flex;
+		align-items: flex-start;
+	}
+	.subscription__icon {
+		margin-right: 12px;
+	}
+	.subscription__text {
+		width: 200px;
+		flex-grow: 1;
+		p{
+			margin: 0 0 6px 0;
+		}
+		span {
+			color: $dark-gray;
+			font-size: 0.8rem;
+			font-style: italic;
+		}
+	}
+
+	/* форма подписки */
+	.subscription-form {
+		margin-top: 18px;
+	}
+	.subscription-form__email {
+		margin-right: 12px;
+		width: 220px;
+		padding: 6px;
+	}
+	.subscription-form__button {
+		background-color: #ffffff;
+		outline: none;
+		border: 1px solid $green-color;
+		color: $green-color;
+		padding: 6px 24px;
+		cursor: pointer;
+		transition: all 0.2s ease-out;
+		&:hover {
+			background-color: lighten($green-color, 50%);
+			/*color: #ffffff;*/
+		}
+	}
+
+}/* END tablet-width */
+
+
+/**************************
+tablet-gorizontal
+**************************/
+@media #{$tablet-gorizontal} {
+
+}/* END tablet-gorizontal */

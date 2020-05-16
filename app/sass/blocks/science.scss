@@ -1,0 +1,436 @@
+/* cover */
+.science-cover {}
+.science-cover__first-img {
+	display: block;
+	max-width: 100%;
+}
+
+/* count */
+.science-count__wrap {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.science-count__title {
+	@include col();
+	@include size(12);
+	@include size-lg(5);
+
+}
+.science-count__list {
+	@include col();
+	@include size-lg(7);
+	display: flex;
+	flex-wrap: wrap;
+}
+.science-count__item {
+	width: 50%;
+	margin-top: 20px;
+	&:last-child {
+		width: 100%;
+	}
+}
+
+/* NIR */
+.science-nir__wrap {
+	font-family: 'SF UI Text';
+}
+.science-nir__description {
+	margin: 20px 0 40px 0;
+}
+.science-nir__list-wrap {}
+.science-nir__list {
+	@include row-flex();
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.science-nir__item {
+	@include col();
+	@include size(12);
+	@include size-sm(6);
+	@include size-md(3);
+	@include size-lg(3);
+	margin-bottom: 30px;
+	a {
+		text-decoration: none;
+		color: $dark-gray;
+	}
+	img {
+		width: 100%;
+		display: block;
+	}
+}
+
+/* strategy */
+.science-strategy__wrap {
+	font-family: 'SF UI Text';
+	background-color: $light-gray;
+	padding: 30px 0;
+}
+.science-strategy__title {
+	margin-bottom: 30px;
+}
+.science-strategy__list {
+	list-style: none;
+	margin: 0 0 14px 0;
+	padding: 0 0 0 12px;
+	@include col();
+	@include size(12);
+	@include size-md(6);
+	@include size-lg(6);
+}
+.science-strategy__list li {
+	margin-bottom: 14px;
+	position: relative;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:before {
+		content: '';
+		width: 6px;
+		height: 6px;
+		border-radius: 100%;
+		position: absolute;
+		left: -14px;
+		top: 6px;
+		background-color: $green-color;
+	}
+}
+
+/* book */
+.science-book__full-img {
+	background-image: url(../img/images/book.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+}
+.science-book {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.science-book-description {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+.science-book-list {
+	@include row-flex();
+}
+.science-book-list--first .science-book-item {
+	@include col();
+	@include size(12);
+	@include size-sm(6);
+	@include size-md(6);
+	@include size-lg(6);
+}
+.science-book-list--second .science-book-item {
+	@include col();
+	@include size(6);
+	@include size-sm(6);
+	@include size-md(3);
+	@include size-lg(3);
+}
+.science-book-item {
+	margin-top: 20px;
+	span {
+		color: $dark-green;
+		font-family: 'BebasNeue-Bold';
+		font-size: 4rem;
+	}
+	p{
+		color: $black-color;
+		font-size: 0.9rem;
+		line-height: 1.3;
+		margin-top: -5px;
+	}
+}
+
+/*  science-main-books__list  */
+.science-main-books__wrap {
+	margin-top: 40px;
+	margin-top: 40px;
+	font-family: 'SF UI Text';
+}
+.science-main-books__title {}
+.science-main-books__list {
+	@include row-flex();
+}
+.science-main-books__item {
+	@include col();
+	@include size(12);
+	@include size-sm(4);
+	@include size-md(3);
+	@include size-lg(3);
+
+	overflow: hidden;
+	margin-top: 20px;
+	img {
+		display: block;
+		width: 100%;
+		transition: all 300ms ease-out;
+	}
+	p {
+		font-size: 0.9rem;
+		color: $dark-gray;
+		line-height: 1.1rem;
+	}
+}
+.science-main-books__item:hover {
+	img {
+		transform: scale(1.05);
+	}
+}
+
+/* science-public */
+.science-public__wrap {
+	font-family: 'SF UI Text';
+	padding: 60px 0;
+	margin-top: 60px;
+}
+.science-public_title {
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+.science-public_image-wrap {
+	@include col();
+	@include size(12);
+	@include size-md(5);
+	@include size-lg(5);
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+.science-public_list-wrap {
+	@include col();
+	@include size(12);
+	@include size-md(7);
+	@include size-lg(7);
+}
+.science-public_list {
+	list-style: none;
+	padding: 30px 0 0 0;
+	margin: 0;
+	li {
+		margin-bottom: 12px;
+		font-size: 0.9rem;
+	}
+}
+
+/**************************
+tablet-width
+**************************/
+@media #{$tablet-width} {
+	/* count */
+	.science-count__wrap {
+		margin-top: 90px;
+		margin-bottom: 90px;
+	}
+	.science-count__item {
+		width: 30%;
+		margin-top: 20px;
+		span {
+			font-size: 6rem;
+		}
+		p {
+			font-weight: 500;
+			margin: -15px 0 0;
+		}
+		&:last-child {
+			width: 40%;
+		}
+	}
+
+	.science-strategy__wrap {
+		padding-top: 60px;
+		padding-bottom: 60px; 
+	}
+	.science-strategy__title {
+		margin-bottom: 40px;
+	}
+	.science-strategy__list {
+		margin: 0 0 20px 20px;
+	}
+	.science-strategy__list li {
+		margin-bottom: 20px;
+		font-size: 1.1rem;
+	}
+
+	.science-main-books__title {
+		margin-bottom: 20px;
+	}
+
+	/* book */
+	.science-book-item {
+		p{
+			margin-top: -5px;
+			width: 90%;
+		}
+	}
+
+}/* END tablet-width */
+
+
+/**************************
+tablet-gorizontal
+**************************/
+@media #{$tablet-gorizontal} {
+
+	/* cover */
+	.science-cover__first-img {
+		display: block;
+		width: 70%;
+		height: auto;
+	}
+
+	/* count */
+	.science-count__wrap {
+		margin-top: 140px;
+		margin-bottom: 140px;
+	}
+	.science-count__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 10px;
+	}
+	
+	/* NIR */
+	.science-nir__wrap {
+		padding: 0 0 120px 0;
+	}
+	.science-nir__description {
+		width: 90%;
+		margin-top: 40px;
+	}
+	.science-nir__item {
+		margin-bottom: 20px;
+		p {
+			font-size: 1.2rem;
+			line-height: 1.3;
+			transition: all 300ms ease-out;
+		}
+	}
+	.science-nir__img-wrap {
+		overflow: hidden;
+		img {
+			transform: scale(1.05);
+			transition: all 300ms ease-out;
+		}
+	}
+
+	.science-nir__item:hover {
+		p {
+			color: #000000;
+		}
+		img {
+			transform: scale(1);
+		}
+	}
+
+	/* strategy */
+	.science-strategy__wrap {
+		padding: 100px 0;
+	}
+	.science-strategy__title {
+		width: 90%;
+		margin-top: 0;
+	}
+	.science-strategy__img {
+		display: block;
+	}
+	.science-strategy__list {
+		padding: 0;
+		font-size: 1.1rem;
+	}
+	.science-strategy__list li {
+		margin-bottom: 18px;
+		color: $dark-gray;
+		position: relative;
+		&:before {
+			display: none;
+		}
+	}
+
+	/* book */
+	.science-book__full-img {
+		height: 450px;
+	}
+	.science-book {
+		margin-top: 80px;
+		margin-bottom: 80px;
+	}
+
+	/*  science-main-books__list  */
+	.science-main-books__title {
+		//@include shift-left(1);
+		margin-bottom: 40px;
+	}
+	.science-main-books__list {
+		margin-top: 0;
+	}
+	.science-main-books__item {
+		position: relative;
+		width: 48%;
+		margin-top: 0;
+	}
+
+	/* science-public */
+	.science-public__wrap {
+		padding: 120px 0;
+		margin-top: 0;
+	}
+	.science-public_image-wrap {
+		p {
+			width: 80%;
+			color: $gray-color;
+			line-height: 1.3;
+			margin: 30px 0 0 0;
+			padding: 6px 0 6px 20px;
+			border-left: 2px solid $green-color;
+		}
+	}
+	.science-public_list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			margin-bottom: 16px;
+			font-size: 1rem;
+		}
+	}
+
+}/* END tablet-gorizontal */
+
+/**************************
+desktop-width
+**************************/
+@media #{$desktop-width} {
+	.science-count__list {
+		margin-top: -30px;
+	}
+	.science-count__item {
+		margin-top: 0;
+	}
+
+	/* nir */
+	.science-nir__item {
+		margin-bottom: 20px;
+		p {
+			font-size: 1rem;
+		}
+	}
+
+	/* book */
+	.science-book {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	.science-book-item {
+		span {
+			font-size: 4.5rem;
+		}
+	}
+
+}/* END desktop-width */

@@ -1,0 +1,80 @@
+.where-buy {
+	position: fixed;
+	padding: 12px 20px;
+	background-color: $green-color;
+	font-family: 'SF UI Text';
+	right: 0px;
+	top: 50%;
+	text-decoration: none;
+	transform-origin: 100% 100%;
+	transform: rotate(-90deg) translateX(100%);
+	z-index: 50;
+	color: #fff;
+	display: none;
+	transition: all 0.3s linear;
+	&:hover {
+		background-color: $dark-green;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+.where-buy__description {
+	color: $green-color;
+}
+
+.where-buy__list {
+	display: flex;
+	flex-wrap: wrap;
+	h3 {
+		color: $dark-green;
+		font-weight: 400;
+		font-size: 1.3rem;
+		margin: 0 0 0.3rem 0;
+	}
+	p {
+		margin: 0;
+		color: $dark-gray;
+	}
+	a {
+		color: $dark-gray;
+		text-decoration: underline;
+	}
+}
+.where-buy__item {
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+/************************
+Tablet
+************************/
+@media #{$tablet-width} {
+	.where-buy__description {
+		font-size: 1.1em;
+		line-height: 1.3em;
+		margin-bottom: 3rem;
+	}
+	.where-buy__item {
+		width: 47%;
+	}
+}/* END tablet-width */
+
+
+/************************
+desktop-width
+************************/
+@media #{$desktop-width} {
+	.where-buy {
+		display: block;
+	}
+	.where-buy__list {
+		h3 {
+			font-size: 1.2rem;
+		}
+	}
+	.where-buy__item {
+		width: 24%;
+		margin-right: 0.7%
+	}
+}/* END tablet-width */

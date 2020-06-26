@@ -166,15 +166,21 @@
 
 	overflow: hidden;
 	margin-top: 20px;
+	text-decoration: none;
 	img {
 		display: block;
 		width: 100%;
 		transition: all 300ms ease-out;
 	}
 	p {
-		font-size: 0.9rem;
+		font-size: 1rem;
 		color: $dark-gray;
-		line-height: 1.1rem;
+		line-height: 1.2rem;
+	}
+	span {
+		color: $black-color;
+		font-weight: 700;
+		font-size: 0.9rem;
 	}
 }
 .science-main-books__item:hover {
@@ -193,22 +199,7 @@
 	margin-top: 0;
 	margin-bottom: 40px;
 }
-.science-public_image-wrap {
-	@include col();
-	@include size(12);
-	@include size-md(5);
-	@include size-lg(5);
-	img {
-		display: block;
-		width: 100%;
-	}
-}
-.science-public_list-wrap {
-	@include col();
-	@include size(12);
-	@include size-md(7);
-	@include size-lg(7);
-}
+
 .science-public_list {
 	list-style: none;
 	padding: 30px 0 0 0;
@@ -381,19 +372,9 @@ tablet-gorizontal
 		padding: 120px 0;
 		margin-top: 0;
 	}
-	.science-public_image-wrap {
-		p {
-			width: 80%;
-			color: $gray-color;
-			line-height: 1.3;
-			margin: 30px 0 0 0;
-			padding: 6px 0 6px 20px;
-			border-left: 2px solid $green-color;
-		}
-	}
 	.science-public_list {
 		list-style: none;
-		padding: 0;
+		padding: 30px 0 0;
 		margin: 0;
 		li {
 			margin-bottom: 16px;
@@ -433,4 +414,7 @@ desktop-width
 		}
 	}
 
+	.science-public__inner-wrap {
+		width: 70%;
+	}
 }/* END desktop-width */

@@ -21,7 +21,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "npm": "^6.10.2",
     "smart-grid": "^2.1.2"
   }
